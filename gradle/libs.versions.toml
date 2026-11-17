@@ -15,6 +15,7 @@ procMacro2 = "0.1.8"
 quote = "0.3.1"
 syn = "0.5.0"
 kmIo = "0.4.0"
+rustLang = "0.2.0"
 
 androidxTestRunner = "1.7.0"
 
@@ -41,17 +42,19 @@ proc-macro2-kotlin = { module = "io.github.kotlinmania:proc-macro2-kotlin", vers
 quote-kotlin = { module = "io.github.kotlinmania:quote-kotlin", version.ref = "quote" }
 syn-kotlin = { module = "io.github.kotlinmania:syn-kotlin", version.ref = "syn" }
 km-io = { module = "io.github.kotlinmania:km-io", version.ref = "kmIo" }
+rust-lang-kotlin = { module = "io.github.kotlinmania:rust-lang-kotlin", version.ref = "rustLang" }
 
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
 
 [bundles]
 jiff-static-commonMainApi = [
   "proc-macro-kotlin",
+  "proc-macro2-kotlin",
+  "syn-kotlin",
+  "rust-lang-kotlin",
 ]
 jiff-static-commonMain = [
   "jiff-tzdb-kotlin",
-  "proc-macro2-kotlin",
   "quote-kotlin",
-  "syn-kotlin",
   "km-io",
 ]
